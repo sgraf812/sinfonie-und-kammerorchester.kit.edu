@@ -1,8 +1,6 @@
 ﻿
 
-var basePath = "//hediet.github.io/sinfonie-und-kammerorchester.kit.edu/";
-//var basePath = "//sinfonie-und-kammerorchester-kit-edu.netlify.com/";
-//var basePath = "//localhost:8080/";
+var basePath = "//sgraf812.github.io/sinfonieorchester.kit.edu/";
 
 $('head').append('<link rel="stylesheet" href="' + basePath + 'style.css" type="text/css" />');
 
@@ -19,7 +17,7 @@ $(document).ready(function () {
 			for (var i = 0; i < data.length; i++) {
 				var entry = data[i];
 				if (entry.Vergangen) continue;
-				
+
 				content.append("<h1>" + entry.Datum + ", " + entry.Uhrzeit + "</h1>");
 
 				content.append('<div class="firstline">' + entry.Ort + '</div>');
