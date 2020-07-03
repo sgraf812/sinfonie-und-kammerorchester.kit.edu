@@ -1,6 +1,6 @@
 ﻿
 
-var basePath = "//sgraf812.github.io/sinfonieorchester.kit.edu/";
+var basePath = "http://fixpt.de/sinfonieorchester.kit.edu/";
 
 $('head').append('<link rel="stylesheet" href="' + basePath + 'style.css" type="text/css" />');
 
@@ -11,7 +11,7 @@ $(document).ready(function () {
 	if ($(".level_1_selected.has_no_children").toArray().some(function (e) {
 		return $(e).text() === "Konzerttermine";
 	})) {
-		$.getJSON(basePath + "data/konzerttermine.json", function (data) {
+		$.getJSON(basePath + "./data/konzerttermine.json", function (data) {
 
 			var content = $("#content");
 			for (var i = 0; i < data.length; i++) {
