@@ -192,13 +192,42 @@
 	},
 	{
 		"Vergangen": false,
-		"Datum": "Samstag, 13. Februar 2021",
+		"Datum": "Samstag, 24. Oktober 2020",
 		"Uhrzeit": "20 Uhr",
+		"Ort": "Audimax",
+		"Orchester": "Sinfonieorchester des KIT",
+		"Leitung": "Tobias Drewelius",
+		"Programm": [ 
+			{
+				"Komponist": "Dmitri Schostakowitsch",
+				"Titel": "Kammersinfonie op. 110a (1960)"
+			},
+			{
+				"Komponist": "Wolfgang Amadeus Mozart",
+				"Titel": "Drei Sätze aus\nSerenade B-Dur für 12 Bläser und Kontrabass KV 361 Gran Partita (1781)"
+			},
+			{
+				"Komponist": "Etienne Nicolas Méhul",
+				"Titel": "Sinfonie Nr. 1 g-moll (1809)"
+			}
+		]
+	},
+	{
+		"Vergangen": false,
+		"Datum": "Samstag, 13. Februar 2021",
+		"Uhrzeit": "TBA",
 		"Ort": "Konzerthaus Karlsruhe",
 		"Orchester": "Sinfonieorchester des KIT",
 		"Leitung": "Tobias Drewelius",
 		"Programm": [ 
-			
+			{
+				"Komponist": "Antonín Dvořák",
+				"Titel": "Der Wassermann"
+			},
+			{
+				"Komponist": "Pjotr Iljitsch Tschaikowski",
+				"Titel": "Sinfonie Nr.5"
+			}
 		]
 	}
 ]
