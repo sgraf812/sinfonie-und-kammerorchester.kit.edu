@@ -22,23 +22,20 @@ $(document).ready(function () {
 
 				var text = '<div>';
 
+				text += '<div style="margin-bottom: 0.8rem">';
 				text += "<em>" + entry.Ort + "</em>";
-
-				text += "<br />";
-				text += "<br />";
+				text += '</div>';
 
 				for (var j = 0; j < entry.Programm.length; j++) {
 					piece = entry.Programm[j];
 					text += "<b>" + piece.Komponist + "</b> " + piece.Titel + "<br />";
 				}
 
-				//text += "<br />";
-
+				text += '<div style="margin-top: 0.8rem">';
 				if (entry.Solist)
 					text += "<em>Solist:</em> " + entry.Solist + "<br />";
-
-				if (entry.Leitung)
-					text += "<div><em>Leitung:</em> " + entry.Leitung;
+				text += "<em>Leitung:</em> " + entry.Leitung;
+				text += '</div>';
 
 				text += '</div>';
 
