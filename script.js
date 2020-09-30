@@ -1,6 +1,6 @@
 ﻿
 
-var basePath = "http://sgraf812.github.io/sinfonieorchester.kit.edu/";
+var basePath = "http://fixpt.de/sinfonieorchester.kit.edu/";
 
 //$('head').append('<link rel="stylesheet" href="' + basePath + 'style.css" type="text/css" />');
 
