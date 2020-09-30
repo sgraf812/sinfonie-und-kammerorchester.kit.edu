@@ -2,25 +2,25 @@
 
 var basePath = "http://fixpt.de/sinfonieorchester.kit.edu/";
 
-$('head').append('<link rel="stylesheet" href="' + basePath + 'style.css" type="text/css" />');
+//$('head').append('<link rel="stylesheet" href="' + basePath + 'style.css" type="text/css" />');
 
 
 
 $(document).ready(function () {
 
-	if ($(".level_1_selected.has_no_children").toArray().some(function (e) {
+	if ($(".navigation-l1 > .active > a").toArray().some(function (e) {
 		return $(e).text() === "Konzerttermine";
 	})) {
 		$.getJSON(basePath + "./data/konzerttermine.json", function (data) {
 
-			var content = $("#content");
+			var container = $(".content > .KIT_section.full");
 			for (var i = 0; i < data.length; i++) {
 				var entry = data[i];
 				if (entry.Vergangen) continue;
 
-				content.append("<h1>" + entry.Datum + ", " + entry.Uhrzeit + "</h1>");
+				container.append("<h1>" + entry.Datum + ", " + entry.Uhrzeit + "</h1>");
 
-				content.append('<div class="firstline">' + entry.Ort + '</div>');
+				container.append('<div class="firstline">' + entry.Ort + '</div>');
 
 				var text = '<div class="text">';
 
@@ -43,20 +43,19 @@ $(document).ready(function () {
 
 				text += '</div>';
 
-				content.append(text);
+				container.append(text);
 			}
 		});
 	}
 
-	$(".nav div").each(function (idx, e) {
-		$(e).html('<a href="' + $("a:contains('" + e.innerText + "')")[0].href + '">' + e.innerText + '</a>');
-	});
+	// I don't understand what this should do
+	//$(".nav div").each(function (idx, e) {
+	//	$(e).html('<a href="' + $("a:contains('" + e.innerText + "')")[0].href + '">' + e.innerText + '</a>');
+	//});
 
-	$("#content .text").each(function (idx, e) {
-
-		if ($(e).text().indexOf("Pressestimmen") === -1)
-			return;
-
+	if ($(".navigation-l1 > .active > a").toArray().some(function (e) {
+		return $(e).text() === "Konzerttermine";
+	})) {
 		$.getJSON(basePath + "data/pressestimmen.json", function (data) {
 			var html = "";
 			$.each(data, function (key, val) {
@@ -75,6 +74,5 @@ $(document).ready(function () {
 
 			$(e).html(html);
 		});
-	});
-
+	}
 });
