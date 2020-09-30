@@ -54,7 +54,7 @@ $(document).ready(function () {
 	//});
 
 	if ($(".navigation-l1 > .active > a").toArray().some(function (e) {
-		return $(e).text() === "Konzerttermine";
+		return $(e).text() === "Pressestimmen";
 	})) {
 		$.getJSON(basePath + "data/pressestimmen.json", function (data) {
 			var html = "";
@@ -72,7 +72,7 @@ $(document).ready(function () {
 
 			});
 
-			$(e).html(html);
+			$(".content > .KIT_section.full").append(html);
 		});
 	}
 });
