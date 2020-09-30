@@ -20,17 +20,15 @@ $(document).ready(function () {
 
 				container.append("<h1>" + entry.Datum + ", " + entry.Uhrzeit + "</h1>");
 
-				container.append('<div class="firstline">' + entry.Ort + '</div>');
+				var text = '<div>';
 
-				var text = '<div class="text">';
-
-				text += "<div>" + entry.Orchester + "</div>";
+				text += "<em>" + entry.Ort + "</em>";
 
 				text += "<br />";
 
 				for (var j = 0; j < entry.Programm.length; j++) {
 					piece = entry.Programm[j];
-					text += "<em>" + piece.Komponist + ":</em> " + piece.Titel + "<br />";
+					text += "<b>" + piece.Komponist + "</b> " + piece.Titel + "<br />";
 				}
 
 				text += "<br />";
