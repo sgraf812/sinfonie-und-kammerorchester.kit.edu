@@ -25,19 +25,20 @@ $(document).ready(function () {
 				text += "<em>" + entry.Ort + "</em>";
 
 				text += "<br />";
+				text += "<br />";
 
 				for (var j = 0; j < entry.Programm.length; j++) {
 					piece = entry.Programm[j];
 					text += "<b>" + piece.Komponist + "</b> " + piece.Titel + "<br />";
 				}
 
-				text += "<br />";
+				//text += "<br />";
 
 				if (entry.Solist)
-					text += "<div><em>Solist:</em> " + entry.Solist + "</div>";
+					text += "<em>Solist:</em> " + entry.Solist + "<br />";
 
 				if (entry.Leitung)
-					text += "<div><em>Leitung:</em> " + entry.Leitung + "</div>";
+					text += "<div><em>Leitung:</em> " + entry.Leitung;
 
 				text += '</div>';
 
