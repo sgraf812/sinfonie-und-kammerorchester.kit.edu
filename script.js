@@ -18,7 +18,7 @@ $(document).ready(function () {
 				var entry = data[i];
 				if (entry.Vergangen) continue;
 
-				container.append("<h1>" + entry.Datum + ", " + entry.Uhrzeit + "</h1>");
+				container.append("<h3>" + entry.Datum + ", " + entry.Uhrzeit + "</h3>");
 
 				var text = '<div>';
 
