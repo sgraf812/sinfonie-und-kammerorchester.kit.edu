@@ -9,7 +9,7 @@ var basePath = "http://fixpt.de/sinfonieorchester.kit.edu/";
 $(document).ready(function () {
 
 	if ($(".navigation-l1 > .active > a").toArray().some(function (e) {
-		return $(e).text() === "Konzerttermine";
+		return $(e).text() === "Konzerttermine" && false; // Currently not in use
 	})) {
 		$.getJSON(basePath + "./data/konzerttermine.json", function (data) {
 
